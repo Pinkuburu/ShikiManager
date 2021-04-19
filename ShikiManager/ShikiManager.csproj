@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelperMeCab\HelperMeCab.csproj">
+      <Project>{ccff984a-a13f-4e4f-b431-66a23f2fe62f}</Project>
+      <Name>HelperMeCab</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
