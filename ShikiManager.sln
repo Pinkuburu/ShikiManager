@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShikiManager", "ShikiManager\ShikiManager.csproj", "{4AAA953D-90F1-4DBB-99F1-81C708ADD56A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AAA953D-90F1-4DBB-99F1-81C708ADD56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAA953D-90F1-4DBB-99F1-81C708ADD56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAA953D-90F1-4DBB-99F1-81C708ADD56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAA953D-90F1-4DBB-99F1-81C708ADD56A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A61D6B9-1295-4724-9092-34A08AD6EC0A}
+	EndGlobalSection
+EndGlobal
