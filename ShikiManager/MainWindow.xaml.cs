@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ShikiManager {
     /// <summary>
@@ -20,6 +21,10 @@ namespace ShikiManager {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            MyLabel.Content = AppDomain.CurrentDomain.BaseDirectory;
         }
     }
 }
