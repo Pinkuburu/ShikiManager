@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelperConfig {
-    public class MeCabConfig {
-        public string DicPath { get; set; }
+    public class TotalConfig {
+        public MeCabConfig MeCabConfig { get; set; }
     }
 }

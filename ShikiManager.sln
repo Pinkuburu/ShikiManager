@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMeCab", "HelperMeCab\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperConfig", "HelperConfig\HelperConfig.csproj", "{D0211E0E-EB8B-4DB2-95B0-4544D207B374}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShikiManagerCLI", "ShikiManagerCLI\ShikiManagerCLI.csproj", "{34D2D455-63F7-4503-BA7F-952FE89580A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D0211E0E-EB8B-4DB2-95B0-4544D207B374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0211E0E-EB8B-4DB2-95B0-4544D207B374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0211E0E-EB8B-4DB2-95B0-4544D207B374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D2D455-63F7-4503-BA7F-952FE89580A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D2D455-63F7-4503-BA7F-952FE89580A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D2D455-63F7-4503-BA7F-952FE89580A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D2D455-63F7-4503-BA7F-952FE89580A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
