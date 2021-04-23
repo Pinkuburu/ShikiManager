@@ -24,26 +24,37 @@ namespace HelperConfig {
         };
 
         // Value
-        public static TotalConfig config;
+        private static TotalConfig config;
 
+        /// <summary>
+        /// Config instance.
+        /// </summary>
+        public static TotalConfig Config { get => config;}
+        
+        /// <summary>
+        /// This is a static class.
+        /// </summary>
         private ConfigHelper() { }
 
-        public static async void ReadConfigAsync() {
+        /// <summary>
+        /// Read config from local.
+        /// </summary>
+        public static void ReadConfig() {
             if (File.Exists(configPath)) {
-                using (FileStream readStream = new FileStream(configPath, FileMode.Create, FileAccess.Read, FileShare.Read)) {
-                    config = await JsonSerializer.DeserializeAsync<TotalConfig>(readStream, jsonSerializerOptions);
-                }
-                return;
+                string jsonString = File.ReadAllText(configPath);
+                config = JsonSerializer.Deserialize<TotalConfig>(jsonString, jsonSerializerOptions);
             } else {
-                //instance = new ConfigHelper();
-                // TODO
+                config = new TotalConfig();
             }
         }
 
-        public static async void WriteConfigAsync() {
-            using (FileStream writeStream = new FileStream(configPath, FileMode.Create, FileAccess.Write)) {
-                await JsonSerializer.SerializeAsync<TotalConfig>(writeStream, config, jsonSerializerOptions);
-            }
+        /// <summary>
+        /// Write config to local.
+        /// </summary>
+        public static void WriteConfig() {
+            Directory.CreateDirectory(dataPathConst);
+            string jsonString = JsonSerializer.Serialize<TotalConfig>(config, jsonSerializerOptions);
+            File.WriteAllText(configPath, jsonString);
         }
     }
 }

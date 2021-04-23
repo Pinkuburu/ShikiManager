@@ -9,8 +9,10 @@ namespace ShikiManagerCLI {
     class MainCLI {
         static void Main(string[] args) {
             Console.WriteLine("APP Start!");
-            ConfigHelper.WriteConfigAsync();
+            ConfigHelper.ReadConfig();
+            ConfigHelper.WriteConfig();
             Console.WriteLine("APP End!");
+            Console.ReadLine();
         }
     }
 }
