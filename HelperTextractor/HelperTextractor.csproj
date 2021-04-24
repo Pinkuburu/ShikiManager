@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34D2D455-63F7-4503-BA7F-952FE89580A1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ShikiManagerCLI</RootNamespace>
-    <AssemblyName>ShikiManagerCLI</AssemblyName>
+    <ProjectGuid>{9730E324-48FA-4C94-ACD4-04A2133C576B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelperTextractor</RootNamespace>
+    <AssemblyName>HelperTextractor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainCLI.cs" />
+    <Compile Include="TextractorHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelperConfig\HelperConfig.csproj">
-      <Project>{d0211e0e-eb8b-4db2-95b0-4544d207b374}</Project>
-      <Name>HelperConfig</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HelperMeCab\HelperMeCab.csproj">
-      <Project>{ccff984a-a13f-4e4f-b431-66a23f2fe62f}</Project>
-      <Name>HelperMeCab</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -95,6 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HelperConfig\HelperConfig.csproj">
+      <Project>{d0211e0e-eb8b-4db2-95b0-4544d207b374}</Project>
+      <Name>HelperConfig</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelperMeCab\HelperMeCab.csproj">
       <Project>{ccff984a-a13f-4e4f-b431-66a23f2fe62f}</Project>
       <Name>HelperMeCab</Name>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using HelperConfig;
 
 namespace ShikiManager {
     /// <summary>
@@ -25,6 +26,11 @@ namespace ShikiManager {
 
         private void Button_Click(object sender, RoutedEventArgs e) {
             MyLabel.Content = AppDomain.CurrentDomain.BaseDirectory;
+
+            Console.WriteLine("APP Start!");
+            ConfigHelper.ReadConfig();
+            ConfigHelper.WriteConfig();
+            Console.WriteLine("APP End!");
         }
     }
 }
