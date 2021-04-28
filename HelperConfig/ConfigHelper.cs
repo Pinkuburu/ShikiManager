@@ -12,8 +12,8 @@ using System.Text.Encodings.Web;
 namespace HelperConfig {
     public class ConfigHelper {
         // Const
-        private const string dataPathConst = @".\data";
-        private const string configPathConst = @".\data\config.json";
+        private const string dataPathConst = @".\Data";
+        private const string configPathConst = @".\Data\Config.json";
 
         // Readonly
         private static readonly string appBasePath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;

@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelperTextractor
-{
-    public class TextractorHelper
-    {
+namespace HelperTextractor {
+    public class TextractorHelper {
     }
 }
