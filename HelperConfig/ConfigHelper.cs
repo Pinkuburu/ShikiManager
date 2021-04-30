@@ -1,45 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.IO;
-using System.Text.Unicode;
 using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
 
 namespace HelperConfig {
     public class ConfigHelper {
+        // Instance
+        private static ConfigHelper instance;
+
+        // Get instance
+        public static ConfigHelper Instance { get { if (instance == null) instance = new ConfigHelper(); return instance; } }
+
         // Const
         private const string dataPathConst = @".\Data";
         private const string configPathConst = @".\Data\Config.json";
 
         // Readonly
-        private static readonly string appBasePath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
-        private static readonly string configPath = Path.Combine(appBasePath, configPathConst);
-        private static readonly JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions {
-            Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
-            WriteIndented = true
-        };
+        private readonly string appBasePath;
+        private readonly string dataPath;
+        private readonly string configPath;
+        private readonly JsonSerializerOptions jsonSerializerOptions;
 
         // Value
-        private static TotalConfig config;
+        private TotalConfig config;
+
+        // Get Property
+        public TotalConfig Config { get => config; }
+        public string AppBasePath { get => appBasePath; }
+        public string DataPath { get => dataPath; }
+        public string ConfigPath { get => configPath; }
 
         /// <summary>
-        /// Config instance.
+        /// Constructor.
         /// </summary>
-        public static TotalConfig Config { get => config;}
-        
-        /// <summary>
-        /// This is a static class.
-        /// </summary>
-        private ConfigHelper() { }
+        private ConfigHelper() {
+            appBasePath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
+            dataPath = Path.Combine(appBasePath, dataPathConst);
+            configPath = Path.Combine(appBasePath, configPathConst);
+            jsonSerializerOptions = new JsonSerializerOptions {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+                WriteIndented = true
+            };
+        }
 
         /// <summary>
         /// Read config from local.
         /// </summary>
-        public static void ReadConfig() {
+        public void ReadConfig() {
             if (File.Exists(configPath)) {
                 string jsonString = File.ReadAllText(configPath);
                 config = JsonSerializer.Deserialize<TotalConfig>(jsonString, jsonSerializerOptions);
@@ -51,8 +59,8 @@ namespace HelperConfig {
         /// <summary>
         /// Write config to local.
         /// </summary>
-        public static void WriteConfig() {
-            Directory.CreateDirectory(dataPathConst);
+        public void WriteConfig() {
+            Directory.CreateDirectory(dataPath);
             string jsonString = JsonSerializer.Serialize<TotalConfig>(config, jsonSerializerOptions);
             File.WriteAllText(configPath, jsonString);
         }

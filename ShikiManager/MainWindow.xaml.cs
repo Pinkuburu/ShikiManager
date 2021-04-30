@@ -25,11 +25,11 @@ namespace ShikiManager {
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            MyLabel.Content = AppDomain.CurrentDomain.BaseDirectory;
+            MyLabel.Content = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
             Console.WriteLine("APP Start!");
-            ConfigHelper.ReadConfig();
-            ConfigHelper.WriteConfig();
+            ConfigHelper.Instance.ReadConfig();
+            ConfigHelper.Instance.WriteConfig();
             Console.WriteLine("APP End!");
         }
     }

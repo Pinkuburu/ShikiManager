@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0211E0E-EB8B-4DB2-95B0-4544D207B374}</ProjectGuid>
+    <ProjectGuid>{2339FBC0-9080-4F66-BAE7-28AA72FE67DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelperConfig</RootNamespace>
-    <AssemblyName>HelperConfig</AssemblyName>
+    <RootNamespace>HelperLocaleEmulator</RootNamespace>
+    <AssemblyName>HelperLocaleEmulator</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,18 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LocaleEmulatorConfig.cs" />
-    <Compile Include="NtleasConfig.cs" />
-    <Compile Include="TextractorConfig.cs" />
-    <Compile Include="MeCabConfig.cs" />
-    <Compile Include="TotalConfig.cs" />
-    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="LocaleEmulatorHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json">
-      <Version>5.0.2</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
